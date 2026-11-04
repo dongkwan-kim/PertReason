@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title | escape }}</title>
+  <meta name="description" content="{{ site.description | escape }}">
+  <meta property="og:title" content="{{ site.title | escape }}">
+  <meta property="og:description" content="{{ site.description | escape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ '/figures/overview.png' | absolute_url }}">
+  <link rel="canonical" href="{{ '/' | absolute_url }}">
+  <style>
+    :root { color-scheme: light; --ink: #152d3b; --muted: #526570; --accent: #007db4; --line: #dce6eb; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body { margin: 0; background: #fff; color: var(--ink); font: 17px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: #006d9d; text-underline-offset: 3px; }
+    a:hover { color: #004b64; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .skip { position: absolute; top: -80px; left: 16px; background: white; padding: 8px 16px; z-index: 1; }
+    .skip:focus { top: 12px; }
+    .site-header { border-top: 5px solid #00536b; border-bottom: 1px solid var(--line); }
+    .header-inner { max-width: 1140px; margin: auto; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-size: 21px; font-weight: 750; letter-spacing: -.6px; text-decoration: none; color: #00536b; }
+    .repo-link { font-size: 14px; font-weight: 600; text-decoration: none; }
+    main { max-width: 1140px; margin: auto; padding: 42px 28px 64px; }
+    h1 { max-width: 1050px; margin: 0 0 24px; font-size: clamp(28px, 3.6vw, 43px); line-height: 1.24; letter-spacing: -1.2px; font-weight: 750; }
+    h2 { margin: 52px 0 22px; padding-bottom: 10px; border-bottom: 1px solid var(--line); font-size: 28px; line-height: 1.35; letter-spacing: -.5px; }
+    p { margin: 0 0 22px; }
+    main > p:first-of-type { margin-bottom: 30px; font-weight: 600; }
+    img { display: block; max-width: 100%; height: auto; margin: 30px auto; }
+    pre { max-width: 100%; overflow-x: auto; margin: 24px 0; padding: 22px 24px; background: #f3f7f9; border: 1px solid var(--line); border-radius: 8px; line-height: 1.65; }
+    code { font: .86em/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    :not(pre) > code { background: #f0f5f7; padding: 2px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+    pre code { padding: 0; background: transparent; }
+    .highlight { margin: 0; }
+    table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+    th, td { border: 1px solid var(--line); padding: 12px 16px; text-align: left; vertical-align: top; }
+    th { background: #edf5f8; font-weight: 650; }
+    tbody tr:nth-child(even) { background: #f9fbfc; }
+    details { margin: 24px 0; padding: 16px; border: 1px solid var(--line); border-radius: 8px; }
+    summary { cursor: pointer; }
+    footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    .footer-inner { max-width: 1140px; margin: auto; padding: 24px 28px; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+    @media (max-width: 600px) { body { font-size: 16px; } main { padding: 28px 20px 40px; } .header-inner, .footer-inner { padding: 16px 20px; } h1 { letter-spacing: -.6px; } h2 { margin-top: 36px; } pre { padding: 16px; } th, td { padding: 10px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">PertReasonQA</a>
+      <a class="repo-link" href="https://github.com/dongkwan-kim/PertReasonQA">View on GitHub &#8599;</a>
+    </div>
+  </header>
+  <main id="main-content">{{ content }}</main>
+  <footer>
+    <div class="footer-inner">
+      <span>PertReason</span>
+      <a href="https://arxiv.org/abs/2607.18777">Paper</a>
+      <a href="https://huggingface.co/datasets/yiminggao618/PertReasonQA">Dataset on Hugging Face</a>
+      <a href="https://github.com/dongkwan-kim/PertReasonQA">Code on GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

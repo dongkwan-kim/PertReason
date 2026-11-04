@@ -1,0 +1,14 @@
+title: PertReasonQA
+description: A knowledge-grounded benchmark for cell-state-conditioned mechanistic reasoning of perturbation effects.
+url: https://dongkwan-kim.github.io
+baseurl: /PertReasonQA
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+exclude:
+  - src
+  - data_aux
+  - data_samples
+  - tests
+  - AGENTS.md

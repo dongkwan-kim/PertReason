@@ -221,3 +221,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# GitHub Pages source files
+!/_config.yml
+!/_layouts/
+!/_layouts/default.html
